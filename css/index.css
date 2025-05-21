@@ -1,0 +1,198 @@
+/* Reset styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+/* Controle en zoekbalk styling */
+.controls {
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input:focus, select:focus {
+    border-color: #007BFF;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Flex container voor films */
+.films-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Film styling met vaste grootte */
+.film {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 260px; /* Vaste breedte van de film */
+    height: 450px; /* Vaste hoogte van de film */
+    flex-shrink: 0; 
+}
+
+.film:hover {
+    transform: scale(1.05);
+}
+
+.film img {
+    width: 100%;
+    height: 300px; /* Vaste hoogte voor de afbeelding */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.film h3 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.film p {
+    padding-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+    flex-grow: 1;
+}
+
+.FavorietToevoegen {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    outline: none; 
+}
+
+.FavorietToevoegen:hover {
+    background-color: lightcoral;
+    border: none; 
+}
+
+#ToonFavorieten {
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#ToonFavorieten:hover {
+    border-color: #007BFF;
+    background-color: #f0f8ff;
+}
+
+/* lichtmodus */
+#KleurModus {
+    background-color: grey;
+    float: right;
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+  
+.film.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode #KleurModus {
+    background-color: #f0f0f0;
+    color: #121212;
+  }
+
+
+/* footer*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+}
+body.dark-mode footer {
+    background-color: rgb(238, 238, 238); 
+    color: black;
+}
+
+/* footer onderaan als de pagina kleiner is dan het scherm */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* zorgt dat layout niet wijzigd als scherm kleiner word */
+@media (max-width: 768px) {
+    .film {
+        width: 200px; 
+        height: 400px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .film {
+        width: 200px; 
+        height: 400px; 
+    }
+}

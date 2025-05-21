@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header>
+        <button onclick="VeranderKleurModus()" id="KleurModus"> Dark Mode </button>
+        <h1>Marvel Films</h1>
+        <div class="Navigatie">
+          <input type="text" id="Zoekbalk" placeholder="Zoek een film...">
+          <select id="sorteren">
+            <option value="Populair.dalen">Populair</option>
+            <option value="Release_Datum.dalen">Release datum (Nieuwste eerst)</option>
+            <option value="Release_Datum.stijgen">Release datum (Oudste eerst)</option>
+          </select>
+          <label for="jaartalFilter">Filter op jaartal:</label>
+          <input type="number" id="jaartalFilter" placeholder="Bijv. 2022" min="2007" max="2026">
+          <button onclick="FavorietenLijst()" id="ToonFavorieten">Toon Favorieten</button>
+        </div>
+        
+    </header>
+    
+    <main>
+        <div id="filmsContainer" class="films-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; Jarno Janssens - Web Advanced Project.</p>
+    </footer>
+
+    
+    <script src="../javascript/index.js"></script>
+
+</body>
+</html>
